@@ -6,4 +6,7 @@ export class UserRepository {
     record.password = null; // TODO: need refactor this
     return record;
   }
+  update(userId, dataSource) {
+    return User.findByIdAndUpdate(userId, dataSource);
+  }
 }
